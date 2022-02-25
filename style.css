@@ -1,0 +1,94 @@
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("patrick-tomasso-QMDap1TAu0g-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.head,
+.text {
+  height: 40vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.typing,
+.author {
+  position: relative;
+  margin: 20px 170px;
+
+  line-height: 1.3;
+  font-weight: 700;
+}
+.typing {
+  color: white;
+  font-size: 30px;
+}
+
+.typing::after {
+  content: "";
+  position: relative;
+  right: -1px;
+  width: 1px;
+  height: 25px;
+  border-right: 2px solid white;
+  animation: blink 0.5s infinite ease;
+}
+.author::after {
+  content: "";
+  position: relative;
+  right: -1px;
+  width: 1px;
+  height: 17px;
+  border-right: 2px solid white;
+  animation: blink 0.5s infinite ease;
+}
+
+.typing-hidden::after {
+  visibility: hidden;
+}
+.author {
+  visibility: hidden;
+  font-size: 20px;
+}
+.head {
+  padding-top: 60px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .head {
+    font-size: 20px;
+  }
+  .typing,
+  .author {
+    font-size: 17px;
+    margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .typing,
+  .author {
+    margin: 40px;
+  }
+}
